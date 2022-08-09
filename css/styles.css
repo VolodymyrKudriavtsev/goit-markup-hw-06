@@ -610,7 +610,6 @@ img {
 }
 
 .subscribe input {
-  /* display: flex; */
   align-items: center;
   width: 358px;
   height: 50px;
@@ -672,15 +671,16 @@ img {
   border-color: var(--acent-color);
 }
 
-.input-wrap {
+.form-field {
   position: relative;
   margin-bottom: 10px;
 }
 
 .input-icon {
   position: absolute;
-  top: 11px;
+  top: 50%;
   left: 12px;
+  transform: translateY(-50%);
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
