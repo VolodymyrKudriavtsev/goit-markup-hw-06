@@ -664,11 +664,12 @@ img {
 
 .order-inp {
   height: 40px;
-  padding-left: 42px;  
+  padding-left: 42px;
 }
 
-.order-inp:hover, .order-coment:hover {
-  border-color: var(--acent-color);  
+.order-inp:hover,
+.order-coment:hover {
+  border-color: var(--acent-color);
 }
 
 .input-wrap {
@@ -683,7 +684,8 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.order-inp:hover + svg {
+.order-inp:hover + svg,
+.order-inp:focus + svg {
   fill: var(--acent-color);
 }
 
@@ -700,34 +702,34 @@ img {
   display: inline-block;
   margin-bottom: 4px;
   font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .order-coment::placeholder {
   font-size: 12px;
-line-height: 1.16;
-letter-spacing: 0.01em;
-color: rgba(117, 117, 117, 0.5);
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
 }
 
 .check-lab {
   display: inline-block;
   margin-bottom: 30px;
   font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
 
- /* ?Как заьенить checkbox? */
+/* ?Как заьенить checkbox? */
 
 .check-lab a {
   color: var(--acent-color);
 }
 
 .order-form .submit-btn {
-margin-left: auto;
-margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------MODAL--------- */
