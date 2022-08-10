@@ -498,8 +498,8 @@
       </div>
     </footer>
 
-    <div class="backdrop" data-modal>
-      <span class="modal">
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
         <button type="button" class="btn-close" data-modal-close>
           <svg class="btn-close-icon" width="18px" height="18px">
             <use href="./images/icon.svg#close-black"></use>
@@ -509,7 +509,7 @@
         <form class="order-form" name="order_form">
 
           <label class="form-field">
-            <span>Ім'я</span>
+            <span class="order-input-name">Ім'я</span>
             <span class="order-input-wrap">
               <input class="order-input" type="text" name="client_name" />
             <svg class="input-icon" width="18px" height="18px">
@@ -519,7 +519,7 @@
           </label>
 
           <label class="form-field">
-            <span>Телефон</span>
+            <span class="order-input-name">Телефон</span>
             <span class="order-input-wrap">
               <input class="order-input" type="text" name="client_name" />
             <svg class="input-icon" width="18px" height="18px">
@@ -529,7 +529,7 @@
           </label>
 
           <label class="form-field">
-            <span>Пошта</span>
+            <span class="order-input-name">Пошта</span>
             <span class="order-input-wrap">
               <input class="order-input" type="email" name="client_email" />
               <svg class="input-icon" width="18px" height="18px">
@@ -539,7 +539,7 @@
           </label>
 
           <label class="form-field">
-            <span>Коментар</span>
+            <span class="order-input-name">Коментар</span>
             <textarea
               class="order-coment"
               name="client_comment"

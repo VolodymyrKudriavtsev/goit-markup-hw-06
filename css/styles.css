@@ -693,7 +693,7 @@ img {
   color: var(--h-text-color);
 }
 
-.form-field > span,
+.order-input-name,
 .order-coment::placeholder {
   display: block;
   margin-bottom: 4px;
