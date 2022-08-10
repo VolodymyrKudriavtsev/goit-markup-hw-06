@@ -125,6 +125,7 @@ img {
   letter-spacing: 0.02em;
   text-decoration: none;
   transition: color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
 }
 
 .top-mail,
@@ -218,6 +219,7 @@ img {
   cursor: pointer;
   border: transparent;
   transition: background-color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
 }
 
 .hero-btn {
@@ -226,8 +228,8 @@ img {
 
 .hero-btn:hover,
 .hero-btn:focus,
-.order-form .submit-btn:hover,
-.order-form .submit-btn:focus {
+.submit-btn:hover,
+.submit-btn:focus {
   background-color: var(--hero-btn-hoover);
 }
 
@@ -378,6 +380,7 @@ img {
   border-radius: 50%;
   transition: color var(--transition-duration) var(--transition-timing-function),
     background-color var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
 }
 
 .worker-soc-icon,
@@ -609,12 +612,28 @@ img {
   display: flex;
 }
 
-.subscribe input {
+.form-field {
+  position: relative;
+}
+
+.subscribe-form > .form-field {
+  margin-right: 12px;
+}
+
+.form-field:focus-within > .subscribe-lable {
+  color: var(--acent-color);
+  transform: translateX(-75px);
+}
+
+.form-field:hover > .subscribe-lable {
+  color: var(--acent-color);
+}
+
+.subscribe-input {
   align-items: center;
   width: 358px;
   height: 50px;
   padding-left: 16px;
-  margin-right: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -625,6 +644,29 @@ img {
   font-size: 16px;
   line-height: 1.25px;
   letter-spacing: 0.03em;
+
+  transition-property: border-color;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+  outline: transparent;
+}
+
+.subscribe-input:not(:placeholder-shown) + .subscribe-lable {
+  transform: translateX(-75px);
+}
+
+.subscribe-lable {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--foot-tel-color);
+  font-size: 16px;
+  line-height: 1.25px;
+  letter-spacing: 0.03em;
+  transition-property: color, transform;
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
 }
 
 .submit-btn {
@@ -651,7 +693,25 @@ img {
   color: var(--h-text-color);
 }
 
-.order-inp,
+.form-field > span,
+.order-coment::placeholder {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
+.order-form > .form-field {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.order-input-wrap {
+  position: relative;
+}
+
+.order-input,
 .order-coment {
   width: 100%;
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -659,21 +719,28 @@ img {
   transition-property: border-color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  outline: transparent;
 }
 
-.order-inp {
+.order-input {
   height: 40px;
   padding-left: 42px;
 }
 
-.order-inp:hover,
-.order-coment:hover {
-  border-color: var(--acent-color);
+.order-coment {
+  height: 120px;
+  padding: 12px 16px;
+  margin-bottom: 25px;
+  resize: none;
 }
 
-.form-field {
-  position: relative;
-  margin-bottom: 10px;
+.subscribe-input:hover,
+.subscribe-input:focus,
+.order-input:hover,
+.order-input:focus,
+.order-coment:hover,
+.order-coment:focus {
+  border-color: var(--acent-color);
 }
 
 .input-icon {
@@ -684,36 +751,16 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.order-inp:hover + svg,
-.order-inp:focus + svg {
+.form-field:focus-within .input-icon,
+.form-field:hover .input-icon {
   fill: var(--acent-color);
 }
 
-/*?Как ПРАВИЛЬНО изменить цвет иконки при ховере на инпут? */
-
-.order-coment {
-  height: 120px;
-  padding: 12px 16px;
-  margin-bottom: 25px;
-  resize: none;
-}
-
-.order-lab {
-  display: inline-block;
-  margin-bottom: 4px;
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
-}
-
-.order-coment::placeholder {
-  font-size: 12px;
-  line-height: 1.16;
-  letter-spacing: 0.01em;
+.order-coment::placeholder {  
   color: rgba(117, 117, 117, 0.5);
 }
 
-.check-lab {
+.check-label {
   display: inline-block;
   margin-bottom: 30px;
   font-size: 14px;
@@ -723,7 +770,7 @@ img {
 
 /* ?Как заьенить checkbox? */
 
-.check-lab a {
+.check-label a {
   color: var(--acent-color);
 }
 
@@ -800,6 +847,7 @@ img {
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  outline: transparent;
 }
 
 .btn-close:hover,

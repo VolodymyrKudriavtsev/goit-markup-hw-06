@@ -482,11 +482,11 @@
         <div class="subscribe">
           <h2 class="bottom-title">Підпишіться на розсилку</h2>
           <form class="subscribe-form" name="subscribe_form" autocomplete="off">
-            <label for="user_email"></label>
+            <label class="form-field">
+              <input class="subscribe-input" type="email" name="user_email" placeholder=" " />
+              <span class="subscribe-lable">E-mail</span>
+            </label>
 
-            <!-- ? Placeholder / Lable??? -->
-
-            <input type="email" name="user_email" id="user_email" placeholder="E-mail" />
             <button class="submit-btn" type="submit">
               Підписатися
               <svg class="subscribe-icon" width="24" height="24">
@@ -498,8 +498,8 @@
       </div>
     </footer>
 
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
+    <div class="backdrop" data-modal>
+      <span class="modal">
         <button type="button" class="btn-close" data-modal-close>
           <svg class="btn-close-icon" width="18px" height="18px">
             <use href="./images/icon.svg#close-black"></use>
@@ -507,37 +507,50 @@
         </button>
         <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
         <form class="order-form" name="order_form">
-          <label class="order-lab" for="client_name">Ім'я</label>
-          <div class="form-field">
-            <input class="order-inp" type="text" name="client_name" id="client_name"/>
+
+          <label class="form-field">
+            <span>Ім'я</span>
+            <span class="order-input-wrap">
+              <input class="order-input" type="text" name="client_name" />
             <svg class="input-icon" width="18px" height="18px">
               <use href="./images/icon.svg#person-black"></use>
             </svg>
-          </div>
-          <label class="order-lab" for="client_tel">Телефон</label>
-          <div class="form-field">
-          <input class="order-inp" type="tel" name="client_tel" id="client_tel"/>
-          <svg class="input-icon" width="18px" height="18px">
-            <use href="./images/icon.svg#phone-black"></use>
-          </svg>
-          </div>
-          <label class="order-lab" for="client_email">Пошта</label>
-          <div class="form-field">
-          <input class="order-inp" type="email" name="client_email" id="client_email"/>
-          <svg class="input-icon" width="18px" height="18px">
-            <use href="./images/icon.svg#email-black"></use>
-          </svg>
-          </div>
-          <label class="order-lab" for="client_comment">Коментар</label>
-          <textarea
-            class="order-coment"
-            name="client_comment"
-            id="client_comment"
-            placeholder="Введіть текст"
-          ></textarea>
+            </span>
+          </label>
 
-          <input type="checkbox" name="user_agree" id="user_agree"/>
-          <label class="check-lab" for="user_agree">Погоджуюся з розсилкою та приймаю
+          <label class="form-field">
+            <span>Телефон</span>
+            <span class="order-input-wrap">
+              <input class="order-input" type="text" name="client_name" />
+            <svg class="input-icon" width="18px" height="18px">
+              <use href="./images/icon.svg#phone-black"></use>
+            </svg>
+            </span>
+          </label>
+
+          <label class="form-field">
+            <span>Пошта</span>
+            <span class="order-input-wrap">
+              <input class="order-input" type="email" name="client_email" />
+              <svg class="input-icon" width="18px" height="18px">
+                <use href="./images/icon.svg#email-black"></use>
+                </svg>
+              </span>
+          </label>
+
+          <label class="form-field">
+            <span>Коментар</span>
+            <textarea
+              class="order-coment"
+              name="client_comment"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+
+          
+          <label class="check-label">
+            <input type="checkbox" name="user_agree"/>
+            Погоджуюся з розсилкою та приймаю
             <a href="#">Умови договору</a>
           </label>
 
