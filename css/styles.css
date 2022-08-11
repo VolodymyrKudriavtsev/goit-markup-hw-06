@@ -55,6 +55,20 @@ img {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 /* ------- HEADER ------- */
 .top {
   background-color: var(--bgc-white);
@@ -441,6 +455,7 @@ img {
   transition-property: color, background-color, box-shadow;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
+  outline: transparent;
 }
 
 .filter-btn:hover,
@@ -451,18 +466,6 @@ img {
     0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
 
 /* cards */
 .card-description {
@@ -479,6 +482,7 @@ img {
   display: block;
   text-decoration: none;
   transition: box-shadow var(--transition-duration) var(--transition-timing-function);
+  outline: transparent;
 }
 
 .card-link:hover,
@@ -625,10 +629,6 @@ img {
   transform: translateX(-75px);
 }
 
-.form-field:hover > .subscribe-lable {
-  color: var(--acent-color);
-}
-
 .subscribe-input {
   align-items: center;
   width: 358px;
@@ -734,11 +734,8 @@ img {
   resize: none;
 }
 
-.subscribe-input:hover,
 .subscribe-input:focus,
-.order-input:hover,
 .order-input:focus,
-.order-coment:hover,
 .order-coment:focus {
   border-color: var(--acent-color);
 }
@@ -751,27 +748,47 @@ img {
   transition: fill var(--transition-duration) var(--transition-timing-function);
 }
 
-.form-field:focus-within .input-icon,
-.form-field:hover .input-icon {
+.form-field:focus-within .input-icon {
   fill: var(--acent-color);
 }
 
-.order-coment::placeholder {  
+.order-coment::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
 .check-label {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
-/* ?Как заьенить checkbox? */
+.check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+  margin-right: 7px;
+  border: 2px solid;
+  border-color: #212121;
+  border-radius: 2px;
+}
+
+.check-input:focus + .check-icon {
+  border-color: var(--acent-color);
+}
+
+.check-input:checked + .check-icon {
+  background-color: var(--acent-color);
+  border: none;
+}
 
 .check-label a {
   color: var(--acent-color);
+  margin-left: 5px;
 }
 
 .order-form .submit-btn {
@@ -847,7 +864,6 @@ img {
   transition-property: color;
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  outline: transparent;
 }
 
 .btn-close:hover,
